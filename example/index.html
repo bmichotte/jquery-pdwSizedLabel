@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>jQuery pdwSizedLabel</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        li {
+            border: 1px solid black;
+            height: 20px;
+            overflow: hidden;
+            display: inline-block;
+        }
+        a {
+            font-size: 20px;
+            display: block;
+            width: 125px;
+        }
+    </style>
+</head>
+<body>
+<article>
+    <p>Default behavior</p>
+    <ul>
+        <li>
+            <a href="#">
+                A very long text bigger than the parent
+            </a>
+        </li>
+        </ul>
+    <p>Resize with default option (minFontSize: 12)</p>
+    <ul>
+        <li>
+            <a id="full" href="#">
+                A very long text bigger than the parent
+            </a>
+        </li>
+        </ul>
+    <p>Resize with minFontSize</p>
+    <ul>
+        <li>
+            <a id="resized" href="#">
+                A very long text bigger than the parent
+            </a>
+        </li>
+    </ul>
+</article>
+<script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+<script src="../src/jquery.pdwSizedLabel.js"></script>
+<script type="text/javascript">
+    $(function()
+    {
+        $('#full').pdwSizedLabel();
+        $('#resized').pdwSizedLabel({ minFontSize: 4 });
+    });
+</script>
+</body>
+</html>

@@ -34,7 +34,7 @@ if (jQuery)
             $.extend(true, options, userOptions || {});
             var maxWidth = this.width();
 
-            $(this).css({
+            this.css({
                 width: 'auto'
             });
 
